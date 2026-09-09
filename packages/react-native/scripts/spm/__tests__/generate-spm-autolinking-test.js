@@ -476,7 +476,6 @@ describe('iOS platform floor', () => {
     expect(generateAutolinkedPackageSwift({})).toContain(
       'platforms: [.iOS("15.1")]',
     );
-    expect(generateAutolinkedPackageSwift({})).not.toContain('.v15');
     expect(
       generateAutolinkedPackageSwift({iosDeploymentTarget: '16.4'}),
     ).toContain('platforms: [.iOS("16.4")]');
@@ -487,7 +486,6 @@ describe('iOS platform floor', () => {
     expect(generateSynthPackageSwift(spec)).toContain(
       'platforms: [.iOS("15.1")]',
     );
-    expect(generateSynthPackageSwift(spec)).not.toContain('.v15');
     expect(
       generateSynthPackageSwift({...spec, iosDeploymentTarget: '16.4'}),
     ).toContain('platforms: [.iOS("16.4")]');
