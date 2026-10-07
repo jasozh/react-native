@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<d853c6645b66c6fe1261aeb0d86da9c0>>
+ * @generated SignedSource<<6b32a5764e7c6c1016c3e99511dce903>>
  * @flow strict
  * @noformat
  */
@@ -106,6 +106,7 @@ export type ReactNativeFeatureFlags = Readonly<{
   enableViewRecyclingForText: Getter<boolean>,
   enableViewRecyclingForView: Getter<boolean>,
   enableVirtualViewContainerStateExperimental: Getter<boolean>,
+  fixBorderlessRippleAndroid: Getter<boolean>,
   fixMappingOfEventPrioritiesBetweenFabricAndReact: Getter<boolean>,
   fixYogaFlexBasisFitContentInMainAxis: Getter<boolean>,
   fuseboxAssertSingleHostState: Getter<boolean>,
@@ -443,6 +444,10 @@ export const enableViewRecyclingForView: Getter<boolean> = createNativeFlagGette
  * Enables the experimental version of `VirtualViewContainerState`.
  */
 export const enableVirtualViewContainerStateExperimental: Getter<boolean> = createNativeFlagGetter('enableVirtualViewContainerStateExperimental', false);
+/**
+ * Prevents a borderless ripple feedback underlay from projecting the entire view background on Android, which could hide the background and ripple.
+ */
+export const fixBorderlessRippleAndroid: Getter<boolean> = createNativeFlagGetter('fixBorderlessRippleAndroid', false);
 /**
  * Uses the default event priority instead of the discreet event priority by default when dispatching events from Fabric to React.
  */

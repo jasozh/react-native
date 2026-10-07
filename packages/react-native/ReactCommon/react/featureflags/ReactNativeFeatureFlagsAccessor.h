@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<fb5339dabaffd95bde6e794c90d0aa28>>
+ * @generated SignedSource<<390d809fda507cdfb5d6f3a166ca9a38>>
  */
 
 /**
@@ -91,6 +91,7 @@ class ReactNativeFeatureFlagsAccessor {
   bool enableViewRecyclingForText();
   bool enableViewRecyclingForView();
   bool enableVirtualViewContainerStateExperimental();
+  bool fixBorderlessRippleAndroid();
   bool fixMappingOfEventPrioritiesBetweenFabricAndReact();
   bool fixYogaFlexBasisFitContentInMainAxis();
   bool fuseboxAssertSingleHostState();
@@ -135,7 +136,7 @@ class ReactNativeFeatureFlagsAccessor {
   std::unique_ptr<ReactNativeFeatureFlagsProvider> currentProvider_;
   bool wasOverridden_;
 
-  std::array<std::atomic<const char*>, 90> accessedFeatureFlags_;
+  std::array<std::atomic<const char*>, 91> accessedFeatureFlags_;
 
   std::atomic<std::optional<bool>> commonTestFlag_;
   std::atomic<std::optional<bool>> cdpInteractionMetricsEnabled_;
@@ -194,6 +195,7 @@ class ReactNativeFeatureFlagsAccessor {
   std::atomic<std::optional<bool>> enableViewRecyclingForText_;
   std::atomic<std::optional<bool>> enableViewRecyclingForView_;
   std::atomic<std::optional<bool>> enableVirtualViewContainerStateExperimental_;
+  std::atomic<std::optional<bool>> fixBorderlessRippleAndroid_;
   std::atomic<std::optional<bool>> fixMappingOfEventPrioritiesBetweenFabricAndReact_;
   std::atomic<std::optional<bool>> fixYogaFlexBasisFitContentInMainAxis_;
   std::atomic<std::optional<bool>> fuseboxAssertSingleHostState_;

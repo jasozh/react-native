@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<dad8d48d93f01fc5ec68f70dbd9a9e73>>
+ * @generated SignedSource<<6238811c274064fbbcd2839230f00b93>>
  */
 
 /**
@@ -378,6 +378,12 @@ class ReactNativeFeatureFlagsJavaProvider
   bool enableVirtualViewContainerStateExperimental() override {
     static const auto method =
         getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("enableVirtualViewContainerStateExperimental");
+    return method(javaProvider_);
+  }
+
+  bool fixBorderlessRippleAndroid() override {
+    static const auto method =
+        getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("fixBorderlessRippleAndroid");
     return method(javaProvider_);
   }
 
@@ -868,6 +874,11 @@ bool JReactNativeFeatureFlagsCxxInterop::enableVirtualViewContainerStateExperime
   return ReactNativeFeatureFlags::enableVirtualViewContainerStateExperimental();
 }
 
+bool JReactNativeFeatureFlagsCxxInterop::fixBorderlessRippleAndroid(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
+  return ReactNativeFeatureFlags::fixBorderlessRippleAndroid();
+}
+
 bool JReactNativeFeatureFlagsCxxInterop::fixMappingOfEventPrioritiesBetweenFabricAndReact(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
   return ReactNativeFeatureFlags::fixMappingOfEventPrioritiesBetweenFabricAndReact();
@@ -1235,6 +1246,9 @@ void JReactNativeFeatureFlagsCxxInterop::registerNatives() {
       makeNativeMethod(
         "enableVirtualViewContainerStateExperimental",
         JReactNativeFeatureFlagsCxxInterop::enableVirtualViewContainerStateExperimental),
+      makeNativeMethod(
+        "fixBorderlessRippleAndroid",
+        JReactNativeFeatureFlagsCxxInterop::fixBorderlessRippleAndroid),
       makeNativeMethod(
         "fixMappingOfEventPrioritiesBetweenFabricAndReact",
         JReactNativeFeatureFlagsCxxInterop::fixMappingOfEventPrioritiesBetweenFabricAndReact),

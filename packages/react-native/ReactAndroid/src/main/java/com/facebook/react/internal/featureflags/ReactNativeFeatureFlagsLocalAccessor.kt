@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<013790bd2c3fa8b9ff03e8c5e924bf91>>
+ * @generated SignedSource<<2730b5fcf6901e962f6e2efb9ebe30da>>
  */
 
 /**
@@ -81,6 +81,7 @@ internal class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcc
   private var enableViewRecyclingForTextCache: Boolean? = null
   private var enableViewRecyclingForViewCache: Boolean? = null
   private var enableVirtualViewContainerStateExperimentalCache: Boolean? = null
+  private var fixBorderlessRippleAndroidCache: Boolean? = null
   private var fixMappingOfEventPrioritiesBetweenFabricAndReactCache: Boolean? = null
   private var fixYogaFlexBasisFitContentInMainAxisCache: Boolean? = null
   private var fuseboxAssertSingleHostStateCache: Boolean? = null
@@ -681,6 +682,16 @@ internal class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcc
       cached = currentProvider.enableVirtualViewContainerStateExperimental()
       accessedFeatureFlags.add("enableVirtualViewContainerStateExperimental")
       enableVirtualViewContainerStateExperimentalCache = cached
+    }
+    return cached
+  }
+
+  override fun fixBorderlessRippleAndroid(): Boolean {
+    var cached = fixBorderlessRippleAndroidCache
+    if (cached == null) {
+      cached = currentProvider.fixBorderlessRippleAndroid()
+      accessedFeatureFlags.add("fixBorderlessRippleAndroid")
+      fixBorderlessRippleAndroidCache = cached
     }
     return cached
   }
